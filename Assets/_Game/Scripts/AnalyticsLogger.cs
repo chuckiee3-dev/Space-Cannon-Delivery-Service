@@ -1,11 +1,8 @@
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Analytics;
-using VContainer;
+
 using VContainer.Unity;
 
 public class AnalyticsLogger: IStartable {
-
+/*
    private readonly ISaveManager saveManager;
    private readonly IGameEvents gameEvents;
    [ Inject ]
@@ -66,6 +63,9 @@ public class AnalyticsLogger: IStartable {
       Analytics.CustomEvent("GameStart");
       #endif
       Debug.Log( nameof(Start) );
+   }
+*/
+   public void Start() {
    }
 
 }
