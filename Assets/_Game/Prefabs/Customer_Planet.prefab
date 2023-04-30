@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 15577626}
   - component: {fileID: 15577627}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15577625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.66, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 2.78, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 764190276}
@@ -72,9 +72,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.9622642, g: 0.68457687, b: 0.34042364, a: 1}
+  m_SortingOrder: 15
+  m_Sprite: {fileID: 21300000, guid: 29d05ca27d858be459baec576eec172c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -5
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0.94305634, b: 1, a: 0.23529412}
+  m_Color: {r: 0, g: 0.9591718, b: 1, a: 0.23529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -238,7 +238,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.7, y: -0.74}
-  m_SizeDelta: {x: 2.5, y: 1}
+  m_SizeDelta: {x: 5, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &921002963
 CanvasRenderer:
@@ -270,8 +270,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0/10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1096aaa5a23d31a49975d3b54eccce68, type: 2}
+  m_sharedMaterial: {fileID: 7865746981522118895, guid: 1096aaa5a23d31a49975d3b54eccce68, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -509,9 +509,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2771237677482427434, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2771237677971906986, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
       propertyPath: m_Name
-      value: Target_Planet
+      value: Customer_Planet
       objectReference: {fileID: 0}
     - target: {fileID: 2771237677971906987, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
       propertyPath: m_RootOrder
@@ -519,11 +523,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2771237677971906987, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.65
+      value: -9.10878
       objectReference: {fileID: 0}
     - target: {fileID: 2771237677971906987, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.6632454
       objectReference: {fileID: 0}
     - target: {fileID: 2771237677971906987, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -557,6 +561,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2771237678395089988, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771237678395089988, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771237678395089988, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771237678395089989, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 104097366, guid: be1be83b441648a4389579e3935bac8e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
 --- !u!4 &965028225987167741 stripped
