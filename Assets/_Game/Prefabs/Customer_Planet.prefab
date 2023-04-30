@@ -577,6 +577,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 104097366, guid: be1be83b441648a4389579e3935bac8e, type: 3}
+    - target: {fileID: 3443057050628766810, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
+      propertyPath: shouldRotate
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f65364bd2ac1364f913c66232ab596f, type: 3}
 --- !u!4 &965028225987167741 stripped

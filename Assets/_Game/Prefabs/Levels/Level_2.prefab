@@ -195,6 +195,18 @@ PrefabInstance:
       propertyPath: packagesRequired
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1436428789, guid: fcab62e6268d01248ac32102aabb69a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.965926
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436428789, guid: fcab62e6268d01248ac32102aabb69a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.25881854
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436428789, guid: fcab62e6268d01248ac32102aabb69a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 965028225987167740, guid: fcab62e6268d01248ac32102aabb69a9, type: 3}
       propertyPath: m_Name
       value: Customer_Planet

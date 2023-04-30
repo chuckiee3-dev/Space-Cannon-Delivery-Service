@@ -314,6 +314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 2771237678395089989}
+  shouldRotate: 1
+  range: {x: -7, y: 7}
 --- !u!1 &2771237678395089991
 GameObject:
   m_ObjectHideFlags: 0

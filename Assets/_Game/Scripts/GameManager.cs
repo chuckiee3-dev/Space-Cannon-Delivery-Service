@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private int playerPackages;
     [SerializeField] private PackageCanvas packageCanvas;
     [SerializeField] private RewindCanvas rewindCanvas;
+    [SerializeField]private bool testLevel;
+    [SerializeField]private int testIndex;
     private float levelStabilizeCheckDuration = 15;
     private float levelStabilizeTimer;
     private IGameEvents gameEvents;
@@ -119,7 +121,7 @@ public class GameManager : MonoBehaviour {
         levelStabilizeTimer = 0;
         levelCompleted = false;
         packagesDelivered = 0;
-        currentLevel = resolver.Instantiate(levels[currentLevelIndex % levels.Count]);
+        currentLevel = resolver.Instantiate(levels[testLevel? testIndex: currentLevelIndex % levels.Count]);
         playerPackages = currentLevel.totalPlayerPackages;
         packageCanvas.SetAmount( playerPackages );
         gameEvents.OnLevelLoaded?.Invoke();

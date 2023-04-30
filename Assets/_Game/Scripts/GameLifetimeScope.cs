@@ -10,6 +10,7 @@ public class GameLifetimeScope : LifetimeScope {
         builder.Register<ISaveManager, PlayerPrefsSaveManager>( Lifetime.Singleton );
         builder.RegisterComponentInHierarchy<GameManager>(  );
         builder.Register<LayerMasks>( Lifetime.Singleton ).AsSelf();
+        builder.RegisterEntryPoint<AnalyticsLogger>(Lifetime.Singleton);
     }
 
 }
