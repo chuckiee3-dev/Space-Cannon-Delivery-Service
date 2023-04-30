@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
 
     [ SerializeField ] private List<LevelData> levels;
     [SerializeField] private int playerPackages;
+    [SerializeField] private PackageCanvas packageCanvas;
+    [SerializeField] private RewindCanvas rewindCanvas;
     private float levelStabilizeCheckDuration = 15;
     private float levelStabilizeTimer;
     private IGameEvents gameEvents;
@@ -70,6 +72,10 @@ public class GameManager : MonoBehaviour {
     private void PackageRequested() {
         if ( playerPackages > 0 ) {
             playerPackages--;
+            packageCanvas.SetAmount( playerPackages );
+            if ( playerPackages <= currentLevel.packagesToDeliver - packagesDelivered ) {
+                rewindCanvas.Show();
+            }
             gameEvents.OnPackageApproved?.Invoke();
         }else if ( playerPackages == 0 ) {
             gameEvents.OnOutOfPackages?.Invoke();
@@ -88,12 +94,14 @@ public class GameManager : MonoBehaviour {
     }
     
     private void LevelCompleted() {
+        rewindCanvas.Hide();
         Debug.Log( "Level Completed" );
         levelCompleted = true;
         gameEvents.OnLevelCompleted?.Invoke();
         saveManager.LevelCompleted();
     }
     private void RewindLevel() {
+        rewindCanvas.Hide();
         Debug.Log( "RewindLevel!" );
         LoadLevel( saveManager.CurrentLevel() );
         gameEvents.OnLevelRewind?.Invoke();
@@ -113,7 +121,15 @@ public class GameManager : MonoBehaviour {
         packagesDelivered = 0;
         currentLevel = resolver.Instantiate(levels[currentLevelIndex % levels.Count]);
         playerPackages = currentLevel.totalPlayerPackages;
+        packageCanvas.SetAmount( playerPackages );
         gameEvents.OnLevelLoaded?.Invoke();
+        if ( currentLevelIndex % levels.Count == 0 ) {
+            packageCanvas.Hide();
+        }
+        else {
+            packageCanvas.Show();
+        }
+        rewindCanvas.Hide();
     }
 
 }

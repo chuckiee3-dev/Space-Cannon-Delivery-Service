@@ -512,6 +512,7 @@ MonoBehaviour:
   idleFrame: {fileID: -1572327708, guid: cb9af5e5fc7273c42a1eb5165fd0b3c9, type: 3}
   chargeFrame: {fileID: 1605342498, guid: cb9af5e5fc7273c42a1eb5165fd0b3c9, type: 3}
   shootFrame: {fileID: -2089846948, guid: cb9af5e5fc7273c42a1eb5165fd0b3c9, type: 3}
+  shootMuzzleFlashFrame: {fileID: 1017590758, guid: cb9af5e5fc7273c42a1eb5165fd0b3c9, type: 3}
 --- !u!1 &5299688724957790094
 GameObject:
   m_ObjectHideFlags: 0

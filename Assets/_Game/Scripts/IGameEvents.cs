@@ -30,5 +30,7 @@ public interface IGameEvents{
     public RewindRequested OnRewindRequested { get; set; }
     public delegate void LevelRewind();
     public LevelRewind OnLevelRewind { get; set; }
+    public delegate void BoxHit();
+    public BoxHit OnBoxHit { get; set; }
 
 }

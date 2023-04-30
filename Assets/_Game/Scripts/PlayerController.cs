@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
     [ SerializeField ] private Sprite idleFrame;
     [ SerializeField ] private Sprite chargeFrame;
     [ SerializeField ] private Sprite shootFrame;
+    [ SerializeField ] private Sprite shootMuzzleFlashFrame;
     
     private float chargeDuration;
 
@@ -118,10 +119,10 @@ public class PlayerController : MonoBehaviour {
             return;
         }
 
-        if ( Input.GetKeyDown( KeyCode.Space ) ) {
+        if ( Input.GetKeyDown( KeyCode.Space )  ) {
             inputValidShootDown = true;
         }
-        if ( Input.GetKey( KeyCode.Space ) ) {
+        if ( Input.GetKey( KeyCode.Space )&& inputValidShootDown ) {
             chargeDuration += Time.deltaTime;
             cannonRenderer.sprite = chargeFrame;
             charging = true;
@@ -139,6 +140,8 @@ public class PlayerController : MonoBehaviour {
 
     private async void SendPackage() {
         isCannonReady = false;
+        cannonRenderer.sprite = shootMuzzleFlashFrame;
+        await UniTask.DelayFrame( 2 );
         cannonRenderer.sprite = shootFrame;
         chargeDuration = Mathf.Clamp( chargeDuration,0, maxChargeDuration );
         float chargeForce = chargeDuration.Remap( 0, maxChargeDuration, shootForcePercentRange.x, shootForcePercentRange.y );

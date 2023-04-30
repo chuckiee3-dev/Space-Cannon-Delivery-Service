@@ -11,5 +11,6 @@ public class GameEvents : IGameEvents
     public IGameEvents.NextLevelRequested OnNextLevelRequested { get; set; }
     public IGameEvents.RewindRequested OnRewindRequested { get; set; }
     public IGameEvents.LevelRewind OnLevelRewind { get; set; }
+    public IGameEvents.BoxHit OnBoxHit { get; set; }
 
 }
